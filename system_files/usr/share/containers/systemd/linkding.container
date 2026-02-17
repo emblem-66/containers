@@ -1,0 +1,15 @@
+[Container]
+ContainerName=linkding
+Image=ghcr.io/sissbruecker/linkding:latest 
+AutoUpdate=registry
+PublishPort=9099:9090/tcp
+UserNS=keep-id
+
+Volume=/var/mnt/orico_a/containers/linkding/data:linkding-data:Z
+
+[Service]
+Restart=on-failure
+SuccessExitStatus=0 143
+
+[Install]
+WantedBy=default.target
