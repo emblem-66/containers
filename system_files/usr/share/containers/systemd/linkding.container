@@ -5,7 +5,7 @@ AutoUpdate=registry
 PublishPort=9099:9090/tcp
 UserNS=keep-id
 
-Volume=/var/mnt/orico_a/containers/linkding/data:linkding-data:Z
+Volume=/var/mnt/orico_a/containers/linkding/data:/linkding-data:Z
 
 [Service]
 Restart=on-failure
