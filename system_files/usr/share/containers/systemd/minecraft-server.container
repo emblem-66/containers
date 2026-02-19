@@ -1,0 +1,15 @@
+[Container]
+ContainerName=minecraft-server
+Image=itzg/minecraft-server:latest 
+AutoUpdate=registry
+PublishPort=25565:25565/tcp
+UserNS=keep-id
+
+Volume=/var/mnt/orico_a/containers/minecraft:/mc-data:Z
+
+[Service]
+Restart=on-failure
+SuccessExitStatus=0 143
+
+[Install]
+WantedBy=default.target
