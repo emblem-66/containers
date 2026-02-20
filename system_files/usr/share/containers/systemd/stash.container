@@ -5,7 +5,7 @@ AutoUpdate=registry
 PublishPort=9999:9999
 
 Volume=/mnt/orico_a/containers/stash/config:/root/.stash:Z
-Volume=/mnt/orico_a/containers/stast/metadata:/metadata:Z
+Volume=/mnt/orico_a/containers/stash/metadata:/metadata:Z
 Volume=/mnt/orico_a/containers/stash/cache:/cache:Z
 Volume=/mnt/orico_a/containers/stash/blobs:/blobs:Z
 Volume=/mnt/orico_a/containers/stash/generated:/generated:Z
