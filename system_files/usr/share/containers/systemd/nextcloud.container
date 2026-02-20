@@ -1,0 +1,17 @@
+[Container]
+ContainerName=nextcloud-aio-mastercontainer
+Image=ghcr.io/nextcloud-releases/all-in-one:latest
+AutoUpdate=registry
+PublishPort=8000:80/tcp
+PublishPort=8008:8080/tcp
+PublishPort=8043:8443/tcp
+UserNS=keep-id
+
+Volume=/var/mnt/orico_a/containers/nextcloud:/nextcloud_aio_mastercontainer:Z
+
+[Service]
+Restart=on-failure
+SuccessExitStatus=0 143
+
+[Install]
+WantedBy=default.target
