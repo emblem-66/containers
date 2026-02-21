@@ -1,6 +1,6 @@
 [Container]
 ContainerName=minecraft-server
-Image=itzg/minecraft-server:latest 
+Image=docker.io/itzg/minecraft-server:latest 
 AutoUpdate=registry
 PublishPort=25565:25565/tcp
 UserNS=keep-id
