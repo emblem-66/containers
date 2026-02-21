@@ -8,6 +8,7 @@ PublishPort=8043:8443/tcp
 UserNS=keep-id
 
 Volume=/var/mnt/orico_a/containers/nextcloud:/nextcloud_aio_mastercontainer:Z
+Volume=/run/user/1001/podman/podman.sock:/var/run/docker.sock:ro
 
 [Service]
 Restart=on-failure
