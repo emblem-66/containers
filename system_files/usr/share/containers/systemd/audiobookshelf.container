@@ -2,7 +2,7 @@
 ContainerName=audiobookshelf
 Image=ghcr.io/advplyr/audiobookshelf:latest
 AutoUpdate=registry
-NoNewPrivileges=true
+#NoNewPrivileges=true
 PublishPort=13378:80
 
 Volume=/mnt/orico_a/containers/audiobookshelf/config:/config:Z
