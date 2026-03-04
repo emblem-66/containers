@@ -5,9 +5,9 @@ AutoUpdate=registry
 PublishPort=80:80
 PublishPort=443:443
 
-Volume=/mnt/orico_a/containers/Caddy/Caddyfile:/etc/caddy/Caddyfile:ro,Z
-Volume=/mnt/orico_a/containers/Caddy/config:/config:Z
-Volume=/mnt/orico_a/containers/Caddy/data:/data:Z
+Volume=/mnt/orico_a/containers/caddy/Caddyfile:/etc/caddy/Caddyfile:ro,Z
+Volume=/mnt/orico_a/containers/caddy/config:/config:Z
+Volume=/mnt/orico_a/containers/caddy/data:/data:Z
 
 #Network=caddy.network
 
