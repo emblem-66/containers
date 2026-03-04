@@ -9,7 +9,11 @@ Volume=/mnt/***/Caddyfile:/etc/caddy/Caddyfile:ro,Z
 Volume=/mnt/***/config:/config:ro,Z
 Volume=/mnt/***/data:/data:ro,Z
 
-
 #Network=caddy.network
 
-[
+[Service]
+Restart=always
+SuccessExitStatus=0 143
+
+[Install]
+WantedBy=default.target
