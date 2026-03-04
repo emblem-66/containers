@@ -1,0 +1,15 @@
+[Container]
+Image=docker.io/caddy.latest
+ContainerName=Caddy
+
+PublishPort=80:80
+PublishPort=443:443
+
+Volume=/mnt/***/Caddyfile:/etc/caddy/Caddyfile:ro,Z
+Volume=/mnt/***/config:/config:ro,Z
+Volume=/mnt/***/data:/data:ro,Z
+
+
+#Network=caddy.network
+
+[
