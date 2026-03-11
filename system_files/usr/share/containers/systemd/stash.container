@@ -1,5 +1,7 @@
 [Container]
-Image=docker.io/stashapp/stash:latest
+#Image=docker.io/stashapp/stash:latest
+#Image=ghcr.io/feederbox826/stash-s6:hwaccel-alpine
+Image=docker.io/nerethos/stash-jellyfin-ffmpeg:latest
 ContainerName=stash
 AutoUpdate=registry
 PublishPort=9999:9999
