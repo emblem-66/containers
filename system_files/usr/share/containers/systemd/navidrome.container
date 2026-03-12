@@ -3,7 +3,6 @@ ContainerName=navidrome
 Image=docker.io/deluan/navidrome:latest
 AutoUpdate=registry
 PublishPort=4533:4533/tcp
-#UserNS=keep-id
 
 Volume=/mnt/orico_a/containers/navidrome/data:/data:Z
 Volume=/mnt/orico_a/media_music:/media:ro,Z
@@ -13,5 +12,4 @@ Restart=on-failure
 SuccessExitStatus=0 143
 
 [Install]
-#WantedBy=default.target
 WantedBy=multi-user.target
