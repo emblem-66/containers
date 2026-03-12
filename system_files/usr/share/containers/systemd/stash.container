@@ -1,38 +1,10 @@
-#[Container]
-#Image=docker.io/stashapp/stash:latest
-#Image=ghcr.io/feederbox826/stash-s6:hwaccel-alpine
-#Image=docker.io/nerethos/stash-jellyfin-ffmpeg:latest
-#ContainerName=stash
-#AutoUpdate=registry
-#PublishPort=9999:9999
-
-#Volume=/mnt/orico_a/containers/stash/config:/root/.stash:Z
-#Volume=/mnt/orico_a/containers/stash/metadata:/metadata:Z
-#Volume=/mnt/orico_a/containers/stash/cache:/cache:Z
-#Volume=/mnt/orico_a/containers/stash/blobs:/blobs:Z
-#Volume=/mnt/orico_a/containers/stash/generated:/generated:Z
-
-#Volume=/mnt/orico_a/media_xxx:/data:ro,Z
-
-#[Service]
-#Restart=always
-#SuccessExitStatus=0 143
-
-#[Install]
-#WantedBy=default.target
-
-#==============================================================#
-
-[Unit]
-After=tailscale-ip.service
-Requires=tailscale-ip.service
-
 [Container]
+Image=docker.io/stashapp/stash:latest
+Image=ghcr.io/feederbox826/stash-s6:hwaccel-alpine
 Image=docker.io/nerethos/stash-jellyfin-ffmpeg:latest
 ContainerName=stash
 AutoUpdate=registry
-EnvironmentFile=/run/tailscale-ip.env
-PublishPort=${TS_IP}:9999:9999/tcp
+PublishPort=127.0.01:9999:9999
 
 Volume=/mnt/orico_a/containers/stash/config:/root/.stash:Z
 Volume=/mnt/orico_a/containers/stash/metadata:/metadata:Z
@@ -47,4 +19,5 @@ Restart=always
 SuccessExitStatus=0 143
 
 [Install]
+WantedBy=default.target
 WantedBy=multi-user.target
