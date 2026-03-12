@@ -3,7 +3,6 @@ ContainerName=homer
 Image=docker.io/b4bz/homer:latest
 AutoUpdate=registry
 PublishPort=8080:8080/tcp
-#UserNS=keep-id
 
 Volume=/mnt/orico_a/containers/homer/config:/www/assets:Z
 
@@ -12,5 +11,4 @@ Restart=on-failure
 SuccessExitStatus=0 143
 
 [Install]
-#WantedBy=default.target
 WantedBy=multi-user.target
