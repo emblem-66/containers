@@ -18,4 +18,5 @@ Environment=LANGS=en_GB
 Restart=always
 
 [Install]
-WantedBy=default.target
+#WantedBy=default.target
+WantedBy=multi-user.target
