@@ -2,9 +2,10 @@
 ContainerName=caddy
 Image=docker.io/library/caddy:latest
 AutoUpdate=registry
-Network=host
-#PublishPort=80:80
-#PublishPort=443:443
+#Network=host
+PublishPort=80:80
+PublishPort=443:443
+PublishPort=2019:2019
 
 Volume=/mnt/orico_a/containers/caddy/Caddyfile:/etc/caddy/Caddyfile:ro,Z
 Volume=/mnt/orico_a/containers/caddy/config:/config:Z
