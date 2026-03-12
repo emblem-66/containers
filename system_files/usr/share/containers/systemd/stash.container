@@ -4,7 +4,7 @@ Image=ghcr.io/feederbox826/stash-s6:hwaccel-alpine
 Image=docker.io/nerethos/stash-jellyfin-ffmpeg:latest
 ContainerName=stash
 AutoUpdate=registry
-PublishPort=127.0.01:9999:9999
+PublishPort=127.0.0.1:9999:9999
 
 Volume=/mnt/orico_a/containers/stash/config:/root/.stash:Z
 Volume=/mnt/orico_a/containers/stash/metadata:/metadata:Z
