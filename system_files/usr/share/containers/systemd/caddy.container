@@ -10,11 +10,10 @@ Volume=/mnt/orico_a/containers/caddy/Caddyfile:/etc/caddy/Caddyfile:ro,Z
 Volume=/mnt/orico_a/containers/caddy/config:/config:Z
 Volume=/mnt/orico_a/containers/caddy/data:/data:Z
 
-#Network=caddy.network
-
 [Service]
 Restart=always
 SuccessExitStatus=0 143
 
 [Install]
-WantedBy=default.target
+#WantedBy=default.target
+WantedBy=multi-user.target
