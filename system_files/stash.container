@@ -6,6 +6,7 @@ ContainerName=stash
 AutoUpdate=registry
 PublishPort=9999:9999
 Network=podman
+Device=/dev/dri:/dev/dri
 
 Volume=/mnt/orico_a/containers/stash/config:/root/.stash:Z
 Volume=/mnt/orico_a/containers/stash/metadata:/metadata:Z
