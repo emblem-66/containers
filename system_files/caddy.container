@@ -6,7 +6,7 @@ AutoUpdate=registry
 PublishPort=80:80
 PublishPort=443:443
 PublishPort=2019:2019
-Network=podman
+#Network=podman
 
 Volume=/mnt/orico_a/containers/caddy/Caddyfile:/etc/caddy/Caddyfile:ro,Z
 Volume=/mnt/orico_a/containers/caddy/config:/config:Z
